@@ -65,6 +65,12 @@ This architecture significantly reduces hallucinations and improves answer accur
 
 ## 🏗️ System Architecture
 <img width="5000" height="2812" alt="image" src="https://github.com/user-attachments/assets/d5ded150-f9e5-4815-b3f5-2082a0f2206f" />
+<img width="800" height="533" alt="image" src="https://github.com/user-attachments/assets/166eaa82-4697-42df-b747-f075aa301f29" />
+<img width="2816" height="1397" alt="image" src="https://github.com/user-attachments/assets/98f97c4a-3c63-4b26-bc55-4bd2d4cbc506" />
+<img width="1412" height="938" alt="image" src="https://github.com/user-attachments/assets/e8ba0daf-e393-47fc-a93c-c25135f91703" />
+<img width="991" height="631" alt="image" src="https://github.com/user-attachments/assets/e582c509-2ca5-47e7-9afc-8e79a3d61fa1" />
+<img width="1223" height="662" alt="image" src="https://github.com/user-attachments/assets/b2f08aa8-2067-4652-96f9-d77d0bdd4920" />
+
 
 
 ---
