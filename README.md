@@ -221,9 +221,29 @@ Expected Output:
 
 ---
 
-## 👨‍💻 Author
+## 🎤 Recruiter Explanation
 
-**S.Ganesh chary**
-B.Tech – Artificial Intelligence & Machine Learning
+I developed a **Production Retrieval-Augmented Generation (RAG) Application** that enables users to upload multiple PDF documents and ask natural language questions based on their content.
 
-Production RAG Application | AI Engineering Project
+The application follows a modern AI architecture with a **Streamlit frontend** and a **FastAPI backend**. When a user uploads a PDF, the backend automatically extracts the document text, performs intelligent chunking, generates vector embeddings using Sentence Transformers, and indexes the content using both **FAISS Vector Search** and **BM25 Keyword Search**.
+
+When a question is submitted, the backend performs **Hybrid Retrieval (FAISS + BM25)** to identify relevant document sections. The retrieved results are then reranked using a **Cross-Encoder model** to improve relevance before being sent to the **Google Gemini LLM** for answer generation.
+
+The system returns accurate, source-grounded responses with detailed citations, including the **source document name, page number, and chunk information**, helping reduce hallucinations and improve answer reliability.
+
+Additional enterprise-grade features include:
+
+* Multi-PDF document ingestion
+* Hybrid Retrieval (FAISS + BM25)
+* Cross-Encoder Reranking
+* Citation-Based Answer Generation
+* Multi-Turn Chat Memory
+* Real-Time Dashboard Metrics
+* Chat Export (TXT & JSON)
+* Automated Testing with Pytest
+* Docker Containerization
+* GitHub Actions CI/CD Integration
+* Modular and Scalable FastAPI Architecture
+
+This project demonstrates practical implementation of modern RAG pipelines, document intelligence systems, semantic search, retrieval optimization, and production-ready AI application development.
+
