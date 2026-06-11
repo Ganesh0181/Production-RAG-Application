@@ -70,9 +70,7 @@ This architecture significantly reduces hallucinations and improves answer accur
 
 <img width="2816" height="1397" alt="image" src="https://github.com/user-attachments/assets/aeef5706-8917-4a5b-8ca1-193d90ffcca8" />
 
-
 <img width="1412" height="938" alt="image" src="https://github.com/user-attachments/assets/e8ba0daf-e393-47fc-a93c-c25135f91703" />
-
 
 <img width="1223" height="662" alt="image" src="https://github.com/user-attachments/assets/b2f08aa8-2067-4652-96f9-d77d0bdd4920" />
 
