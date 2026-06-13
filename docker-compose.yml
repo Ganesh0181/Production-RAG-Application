@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rag-backend
+    ports:
+      - "9001:9001"
+    volumes:
+      - ./data:/app/data
+      - ./indexes:/app/indexes
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    container_name: rag-frontend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend

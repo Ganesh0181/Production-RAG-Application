@@ -1,0 +1,457 @@
+[
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 0,
+    "text": "MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (A) \nFORMAL LANGUAGES AND AUTOMATA THEORY (CS602PC) \nPROJECT REPORT \n \nTITLE OF PROJECT:   System Validation Engine: Turing Machine Design for String          \nEquality and DFA-Based Intrusion Detection \n \nSubmitted By: \nName: S  GANESH  CHARY , D  YASASWINI \nRoll No: 23261A0552 , 23261A0516 \nBranch: CSE \nYear: 2025-2026 \n \nSubmitted To: Ms S RENUKA Assistant Professor \nDepartment of Computer Science and Engineering \nMGIT, Hyderabad \n \nAcademic Year:2025-2026 \n \n \n \n \n \n \n \n \n \n \n \nCERTIFICATE \nThis is to certify that the project entitled System Validation Engine: Turing Machine Design for"
+  },
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 1,
+    "text": "CERTIFICATE \nThis is to certify that the project entitled System Validation Engine: Turing Machine Design for \nString Equality and DFA -Based Intrusion Detection  is a bonafide work carried out by S \nGANESH CHARY (23261A0552), D YASHAWINI(23261A0516) in partial fulfillment  of \nthe requirements for the award of degree of Bachelor of Technology in Computer Science and \nEngineering. \n \nFaculty Guide Signature: ____________ \nName: Ms S Renuka \nDesignation: Assistant Professor \n \nHead of the Department Signature: ____________ \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nACKNOWLEDGEMENT \nI would like to express my sincere gratitude to our faculty guide Ms S Renuka  for their"
+  },
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 2,
+    "text": "ACKNOWLEDGEMENT \nI would like to express my sincere gratitude to our faculty guide Ms S Renuka  for their \nvaluable guidance. I also thank the Head of the Department and college management for their \nsupport in completing this project. \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nINDEX \n1. Introduction \n2. Problem Statement \n3. Objective \n4. Theory \n5. Design / Diagram \n6. Example \n7. Result \n8. Conclusion \n9. References \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nINTRODUCTION \nThe System Validation Engine is designed using the concept of Turing Machines (TM) from \nFormal Languages and Automata Theory (FLAT). A Turing Machine is a powerful"
+  },
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 3,
+    "text": "Formal Languages and Automata Theory (FLAT). A Turing Machine is a powerful \ncomputational model capable of performing complex symbolic manipulations on an infinite \ntape. In this project, it is applied to solve a fundamental verification problem: checking whether \ntwo input strings separated by the symbol “#” are identical. \nString comparison is an important operation in many computational systems, especially in data \nvalidation, compiler design, and security applications. Unlike simple pattern matching \ntechniques, a Turing Machine provides a step-by-step formal mechanism to process and verify \nstrings systematically using state transitions and tape operations."
+  },
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 4,
+    "text": "strings systematically using state transitions and tape operations. \nIn this System Validation Engine, the Turing Machine reads input strings of the form w#w, \nwhere the left and right substrings are compared symbol by symbol. The machine marks \nmatched symbols and continues the comparison until all characters are verified. If all \ncorresponding symbols match, the machine accepts the input; otherwise, it rejects it. \nThis project demonstrates the practical application of theoretical computation models in \nsolving real-world validation problems and highlights the importance of automata theory in \nsystem design and verification processes. \n \nPROBLEM STATEMENT"
+  },
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 5,
+    "text": "system design and verification processes. \n \nPROBLEM STATEMENT \nThe problem addressed in this System Validation Engine is the design of a Turing Machine \nthat can determine whether two strings separated by the symbol “#” are identical. \nGiven an input string of the form: \n                                                w # w \nthe system must verify whether the substring before “#” is exactly the same as the substring \nafter “#”. \nTraditional string comparison methods rely on high -level programming constructs, but this \nproject aims to solve the same problem using a formal computational model. The challenge is \nto design a Turing Machine that can:"
+  },
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 6,
+    "text": "to design a Turing Machine that can: \n• Read symbols from both sides of the separator “#”  \n• Compare them one by one  \n• Mark matched symbols  \n• Detect mismatches  \n• Reach an accept or reject state accordingly \n \n \nOBJECTIVE \nThe objectives of the proposed Automata-Based Multi-Layer Authentication System Using \nDFA and Turing Machine are as follows: \n• To design and implement a secure authentication system using concepts from Formal \nLanguages and Automata Theory (FLAT). \n• To develop a Deterministic Finite Automaton (DFA)  for validating user login \ncredentials through state transitions. \n• To design a Turing Machine (TM) for processing and verifying One-Time Passwords \n(OTP)."
+  },
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 7,
+    "text": "• To design a Turing Machine (TM) for processing and verifying One-Time Passwords \n(OTP). \n• To implement a Multi-Layer Authentication (MLA)  framework consisting of \ncredential verification, OTP verification, and behavioral biometric verification. \n• To demonstrate the practical application of DFA and Turing Machine concepts in real-\nworld cybersecurity and authentication systems. \n \nTHEORY / MODEL USED \nThe System Validation Engine is developed using the concepts of Formal Languages and \nAutomata Theory (FLAT) , specifically based on the computational model of a Turing \nMachine (TM) . The Turing Machine is a powerful theoretical model introduced by Alan"
+  },
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 8,
+    "text": "Machine (TM) . The Turing Machine is a powerful theoretical model introduced by Alan \nTuring, capable of simulating any algorithmic computation using an infinite tape, a tape head, \nand a set of states. \nIn this project, the Turing Machine is used to solve the problem of string equality checking, \nwhere two strings are separated by the symbol “#”. The machine processes the input step by \nstep, compares corresponding symbols from both sides, and determines whether they are \nidentical. \n \nTuring Machine (TM) Model \nA Turing Machine is formally defined as: \n𝑀 = (𝑄, Σ, Γ, 𝛿, 𝑞0, 𝐵, 𝐹) \n \nWhere: \n• Q → Finite set of states  \n• Σ (Sigma) → Input alphabet"
+  },
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 9,
+    "text": "𝑀 = (𝑄, Σ, Γ, 𝛿, 𝑞0, 𝐵, 𝐹) \n \nWhere: \n• Q → Finite set of states  \n• Σ (Sigma) → Input alphabet  \n• Γ (Gamma) → Tape alphabet (includes input symbols + special markers)  \n• δ (Delta) → Transition function that defines state changes  \n• q₀ → Initial state  \n• B → Blank symbol  \n• F → Set of final (accepting) states  \n \n \nDESIGN / DIAGRAM \nThe proposed System Validation Engine is designed using a Turing Machine (TM) model \nto perform string equality checking for two strings separated by the symbol “#” . The \nsystem follows a structured mark-and-compare approach, where each symbol from the left \nand right substrings is matched sequentially using tape operations and state transitions."
+  },
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 10,
+    "text": "and right substrings is matched sequentially using tape operations and state transitions. \nThe input string is processed on an infinite tape, and the Turing Machine uses a finite control \nunit to guide transitions between states. The system ensures that both strings are identical by \nmarking matched symbols and rejecting any mismatch. The overall system architecture and \nworking flow are illustrated below. \n \nFig. 1. Overall System Architecture"
+  },
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 11,
+    "text": "Figure 1 represents the architecture of the System Validation Engine based on a Turing \nMachine model. The system consists of the following components: \n• Input String Tape containing data in the form w#w  \n• Turing Machine Head for reading, writing, and moving across the tape  \n• Finite Control Unit (State Transition System)  \n• Tape Alphabet including input symbols and marking symbols (X, Y)  \n• Decision Module (Accept / Reject State)  \nThe system operates by reading the input string, marking matched symbols, and comparing \ncorresponding characters on both sides of the separator “#”. The process continues until all"
+  },
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 12,
+    "text": "corresponding characters on both sides of the separator “#”. The process continues until all \nsymbols are verified. If all symbols match, the system enters the Accept State; otherwise, it \ntransitions to the Reject State. \n \n \n2. System Components \nThe architecture consists of the following components: \n• Input Tape: Contains input in the form w#w  \n• Tape Head: Reads and writes symbols and moves left/right  \n• Finite Control Unit: Controls state transitions  \n• Tape Alphabet: {0, 1, #, X, Y, □}  \n• Decision Module: Accept or Reject state \n \n \nWorking Principle \n• The input string is first written on the tape in the form w#w.  \n• The Turing Machine head scans the tape from left to right."
+  },
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 13,
+    "text": "• The Turing Machine head scans the tape from left to right.  \n• The finite control unit decides transitions based on the current symbol.  \n• Matching symbols are marked to avoid reuse.  \n• The machine continues until all symbols are processed.  \n• If successful → system enters Accept State.  \n• If mismatch occurs → system enters Reject State. \n \n \n4. Formal Definition of Turing Machine \nYou should include this (VERY IMPORTANT for marks): \n• Q = {q0, q1, q2, q3, q_accept, q_reject}  \n• Σ = {0,1,#}  \n• Tape alphabet = {0,1,#,X,Y,□}  \n• Start state = q0  \n• Accept state = q_accept  \n• Reject state = q_reject \n \n5. Transition Function  \n  \n \n \n6. Tape Transitions"
+  },
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 14,
+    "text": "7. Conclusion \nThe System Validation Engine demonstrates a clear and practical application of Turing \nMachine theory for solving the string equality problem. By systematically marking and \ncomparing corresponding symbols on both sides of the separator “#”, the machine ensures that \nevery character is verified accurately. Any mismatch or imbalance in length immediately leads \nto rejection, while complete successful matching results in acceptance. \nThis approach highlights the power of formal automata in performing structured computation \nand validation tasks. It not only reinforces theoretical concepts from automata theory but also"
+  },
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 15,
+    "text": "and validation tasks. It not only reinforces theoretical concepts from automata theory but also \nshows their relevance in real-world computing problems such as data verification, parsing, and \nprotocol validation. The model effectively bridges theory and practice, illustrating how \ncomplex logical decisions can be reduced to simple, rule-based state transitions."
+  },
+  {
+    "source": "flat 552 516 71937928809.pdf",
+    "chunk_id": 16,
+    "text": "REFERENCES \n[1] J. E. Hopcroft, R. Motwani, and J. D. Ullman, Introduction to Automata Theory, \nLanguages, and Computation, Pearson Education, 3rd Edition. \n[2] P. Linz, An Introduction to Formal Languages and Automata , Jones & Bartlett Learning, \n6th Edition. \n[3] M. Sipser, Introduction to the Theory of Computation, Cengage Learning, 3rd Edition. \n[4] J. C. Martin, Introduction to Languages and the Theory of Computation , McGraw-Hill \nEducation, 4th Edition. \n[5] Department of Computer Science and Engineering, CS602PC Formal Languages and \nAutomata Theory Lecture Notes, MR-22 Regulations."
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 0,
+    "text": "Smart Fare Comparison App \n \nAn Industry Oriented Mini Project (CS653PC) \n \nSubmitted in partial fulfilment of the requirements \n for \nthe award of the degree of \nBachelor of Technology \n                                                                                  In \nComputer Science and Engineering \n                                                                                  by \n \nS GANESH CHARY (23261A0552) \nR VIVEK (23261A0548) \n                                                               VI Semester \n                                                       Under the guidance of \nMs. S. Renuka \n(Assistant Professor) \nMs. D.S. Bhavani \n(Assistant Professor)"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 1,
+    "text": "Ms. S. Renuka \n(Assistant Professor) \nMs. D.S. Bhavani \n(Assistant Professor) \n \n \nDEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING  \nMAHATMA GANDHI INSTITUTE OF TECHNOLOGY (AUTONOMOUS) \n (Affiliated to Jawaharlal Nehru Technological University Hyderabad) Gandipet, \nHyderabad-500 075, Telangana (India)  \n2025-2026\ni  \n \nDEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING  \nMAHATMA GANDHI INSTITUTE OF TECHNOLOGY (AUTONOMOUS) \n (Affiliated to Jawaharlal Nehru Technological University Hyderabad) Gandipet, \nHyderabad-500 075, Telangana (India)  \n \n \n \nCERTIFICATE \n \nThis is to certify that the Project(CS653PC) entitled “ Smart Fare Comparison  App”, is being"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 2,
+    "text": "CERTIFICATE \n \nThis is to certify that the Project(CS653PC) entitled “ Smart Fare Comparison  App”, is being \nsubmitted by S GANESH CHARY bearing Roll No: 23261A0552 and R VIVEK bearing Roll \nNo: 23261A0548 in the partial fulfillment for completion of Bachelor of Technology in Computer \nScience and Engineering to Mahatma Gandhi Institute of Technology is a record of bona -fide \nwork carried out under the guidance and supervision.The report is based on the work done \nentirely by us and not copied from any other source. \n \n    \n   Project Guide        Head of the Department \n    Ms. S. Renuka        Dr. T.V. Rajinikanth  \n    Asst. Professor, Dept. of CSE      Professor, Dept. of CSE"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 3,
+    "text": "Ms. S. Renuka        Dr. T.V. Rajinikanth  \n    Asst. Professor, Dept. of CSE      Professor, Dept. of CSE \n \n \n     \n    Project Guide \n    Ms. D.S. Bhavani \n    Asst. Professor, Dept. of CSE \n \n \n        External Examiner                    \nii  \n \nDECLARATION \n \nThis is to certify that the work reported in  Industry Oriented Mini Project (CS653PC) titled  \n“SMART FARE COMPARISON APP” is a record of work done by us in the Department of \nComputer Science and Engineering, Mahatma Gandhi Institute of Technology, Hyderabad .No \npart of the work is copied from books/journals/internet and wherever  the portion is taken, the"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 4,
+    "text": "part of the work is copied from books/journals/internet and wherever  the portion is taken, the \nsame has been duly referred to in the text. The report is based on the work done entirely by us \nand not copied from any other source. \n \n \n \n \n \n \n \n \n \n                                                                                                                   S GANESH CHARY  \n                                                                                                                                          (23261A0552) \n \n \n      R VIVEK \n(23261A0548) \niii  \n \nACKNOWLEDGEMENT \n \n \n \nThe satisfaction that accompanies the successful completion of any task would be incomplete"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 5,
+    "text": "ACKNOWLEDGEMENT \n \n \n \nThe satisfaction that accompanies the successful completion of any task would be incomplete \nwithout the mention of people who made it possible because success is the abstract of hard \nwork and perseverance, but steadfast of all is encouraging guidance. So, we acknowledge all \nthose whose guidance and encouragement served as a beacon light and crowned my efforts with \nsuccess. \n \n We would like to express our sincere thanks to, Prof G. Chandra Mohan Reddy, Principal \nMGIT, for providing the working facilities in college.  \n \nWe wish to express our sincere thanks and gratitude to Dr. T.V. Rajinikanth, Professor and"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 6,
+    "text": "We wish to express our sincere thanks and gratitude to Dr. T.V. Rajinikanth, Professor and \nHOD, Department of CSE, MGIT , for all the timely support and valuable suggestions during \nthe period of project.  \n \nWe are extremely thankful to M r. Mahesh Kumar, Associate Professor, Department of \nCSE, MGIT and Mr. B. Chandrasekhar, Assistant Professor, Department of CSE, MGIT , \nIndustry Oriented Mini Project (CS705PC) Coordinators for their encouragement and support \nthroughout the project. \n \nWe would like to express our sincere appreciation to our mentor Ms. S. Renuka , Assistant \nProfessor, Department of CSE, MGIT  and M s. D.S. Bhavani, Assistant Professor,"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 7,
+    "text": "Professor, Department of CSE, MGIT  and M s. D.S. Bhavani, Assistant Professor, \nDepartment of CSE, MGIT  for their guidance and unwavering assistance, which greatly \ncontributed to the successful completion of our work. \n \nFinally, we would also like to thank all the faculty and staff of the CSE Department who helped \nus directly or indirectly in completing this project. \n \n \n \n \n S GANESH \n(23261A0552) \n \n \nR VIVEK \n(23261A0548) \niv  \nTABLE OF CONTENTS \nContents         PageNo. \nCERTIFICATE           i \nDECLARATION        ii \nACKNOWLEDGEMENT       iii  \nTABLE OF CONTENTS       iv \nLIST OF FIGURES        v \nLIST OF TABLES        vi \nABSTRACT         vii \n          \n1 INTRODUCTION        1"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 8,
+    "text": "LIST OF FIGURES        v \nLIST OF TABLES        vi \nABSTRACT         vii \n          \n1 INTRODUCTION        1 \n 1.1 Objectives       2 \n 1.2 Existing System       2 \n 1.3 Proposed System      2 \n 1.4 System Requirements       3 \n          \n2 LITERATURE SURVEY       5 \n 2.1 Literature Survey Table       5 \n          \n3 DESIGN AND METHODOLOGY      6 \n  3.1 System Architecture       6 \n 3.2UMLDiagrams       8 \n 3.3 Methodology       13 \n          \n4 IMPLEMENTATION        16 \n 4.1 Location Input & Processing Module     16 \n 4.2 Distance Calculation Module     17 \n 4.3 Fare Calculation Logic       18 \n 4.4 Backend API Implementation      19 \n 4.5 Database Implementation      19"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 9,
+    "text": "4.3 Fare Calculation Logic       18 \n 4.4 Backend API Implementation      19 \n 4.5 Database Implementation      19 \n 4.6 Results Display Module       20 \n          \n5 TESTING AND RESULTS       21 \n  5.1 Testing        21 \n  5.1.1 Sample Test Cases Table    21 \n 5.2 Results       22 \n          \n6 CONCLUSION AND FUTURE SCOPE      26 \n 6.1 Conclusion     \n \n  26 \n 6.2 Future Scope       27 \n          \n7 BIBILOGRAPHY        28 \n 7.1 References       28 \n          \n8 APPENDIX         29 \n  \nv  \n \nLIST OF FIGURES \n \n \nFigure No. Figure Name Page No. \nFigure 3.1.1 System Architecture 6 \nFigure 3.1.2 Block Diagram 7 \nFigure 3.2.1 Sequence Diagram 8 \nFigure 3.2.2 ER Diagram 8"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 10,
+    "text": "Figure 3.1.2 Block Diagram 7 \nFigure 3.2.1 Sequence Diagram 8 \nFigure 3.2.2 ER Diagram 8 \nFigure 3.2.3 Use Case Diagram 8 \nFigure 4.1.1 Location Input & Processing Module  13 \nFigure 4.2.1 Distance Calculation Module 14 \nFigure 4.3.1 Fare Calculation Module 15 \nFigure 5.2.1 Dashboard Interface 18 \nFigure 5.2.2 Distance Calculation Result 18 \nFigure 5.2.3 Fare Comparison Result 18 \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n  \nvi  \n \n \nLIST OF TABLES \n \n \n \nTable No. Table Name Page No. \nTable 2.1 Literature Survey 5 \nTable 5.1.1 Sample Test Cases 21 \n \nvii  \nABSTRACT \nThe rapid growth of urban transportation systems has led to the widespread adoption of multiple"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 11,
+    "text": "vii  \nABSTRACT \nThe rapid growth of urban transportation systems has led to the widespread adoption of multiple \nride-hailing services, including cars, bikes, and auto -rickshaws. Despite the availability of these \nservices, users often face challenges in comparing fares across different platforms in real time, \nleading to confusion and inefficient decision -making. The Smart Fare Comparison App is \ndeveloped to address this issue by providing a unified and user-friendly platform that enables users \nto compare estimated fares for various transportation modes instantly. \n \nThe system integrates advanced mapping technologies such as the Google Maps API and the"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 12,
+    "text": "The system integrates advanced mapping technologies such as the Google Maps API and the \nDistance Matrix API to accurately determine the shortest route, distance, and estimated travel time \nbetween a given source and destination. Based on these parameters, the application applies \npredefined pricing algorithms tailored to different ride categories, ensuring realistic and reliable \nfare estimation. \n \nThe application is developed using the MERN stack, which includes MongoDB, Express.js, \nReact.js, and Node.js, enabling a scalable, responsive, and efficient architecture. The frontend \noffers an intuitive interface where users can easily input their travel locations, while the backend"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 13,
+    "text": "offers an intuitive interface where users can easily input their travel locations, while the backend \nhandles API requests, distance calculations, and fare computation seamlessly. \n \nBy consolidating fare information into a single platform, the system helps users make cost -\neffective and informed travel decisions, reduces the time spent switching between multiple \napplications, and enhances overall convenience. Future enhancements of the system include \nintegration with real -time ride-hailing service APIs, dynamic pricing mechanisms, and AI -based \nfare prediction models to further improve accuracy and user experience. \n1  \n \n1. INTRODUCTION"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 14,
+    "text": "fare prediction models to further improve accuracy and user experience. \n1  \n \n1. INTRODUCTION \n \nIn recent years, urban transportation has undergone a significant transformation due to the rapid \ngrowth of digital technologies and the widespread adoption of smartphones. With the increasing \npopulation in cities, the demand for efficient, reliable, and affordable transportation has become \nmore critical than ever. People rely heavily on various modes of transport such as taxis, auto -\nrickshaws, and bike taxis for their daily commute. However, one of the major challenges faced by \ncommuters is the lack of a unified platform to compare fares across different transportation"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 15,
+    "text": "commuters is the lack of a unified platform to compare fares across different transportation \noptions.Most existing ride -hailing services provide fare estimates only within their own \nplatforms. As a result, users often need to switch between multiple applications to compare \nprices, which is both time -consuming and inconvenient. Additionally, fare structures vary based \non distance, time, traffic conditions, and demand, making it difficult for users to make informed \ndecisions quickly. \n \nThe Smart Fare Comparison App is designed to address these challenges by providing a centralized \nsystem where users can compare fares for multiple transportation options in real time. By"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 16,
+    "text": "system where users can compare fares for multiple transportation options in real time. By \nintegrating modern web technologies and mapping services, the application enables users to enter \ntheir source and destination locations and instantly receive estimated fares for different ride \ncategories such as cars, bikes, and autos. \nThe system utilizes advanced APIs such as Google Maps API and Distance Matrix API to calculate \naccurate distances and travel durations. These APIs play a crucial role in ensuring that the fare \nestimation is as close to real -world pricing as possible. Based on the retrieved distance and time"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 17,
+    "text": "estimation is as close to real -world pricing as possible. Based on the retrieved distance and time \ndata, the application applies predefined pricing models to compute estimated fares for various \nvehicle types. \n \nThis project is developed using the MERN stack, which consists of MongoDB, Express.js, \nReact.js, and Node.js. The frontend is built using  React.js, providing a responsive and interactive \nuser interface. The backend, powered by Node.js and Express.js, handles API requests, processes \ndata, and performs fare calculations. MongoDB is used for storing user data and ride -related \ninformation, ensuring scalability and flexibility. \n \n2  \n \n1.1 Problem Definition"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 18,
+    "text": "information, ensuring scalability and flexibility. \n \n2  \n \n1.1 Problem Definition \n \nIn today’s fast-paced world, transportation plays a vital role in daily life. Despite the availability \nof multiple ride -hailing platforms, users face several challenges when it comes to selecting the \nmost economical and convenient option. One of the primary issues is the absence of a unified \nplatform that allows users to compare fares across different transportation modes in real \ntime.Currently, users must open multiple applications individually to check fare estimates, which \nleads to increased effort and time consumption. Moreover, the pricing mechanisms used by these"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 19,
+    "text": "leads to increased effort and time consumption. Moreover, the pricing mechanisms used by these \nplatforms are often dynamic and influenced by factors such as traffic conditions, demand, and time \nof day. This makes it difficult for users to accurately estimate travel costs and choose the best \noption. \n \n1.2 Existing Applications \n \nSeveral applications and systems currently exist in the domain of transportation and navigation. \nPopular ride-hailing services such as Uber and Ola provide users with fare estimates and booking \noptions. However, these platforms are limited to their own services and do not offer comparisons"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 20,
+    "text": "options. However, these platforms are limited to their own services and do not offer comparisons \nwith other providers or transportation modes.Similarly,  mapping services like Google Maps \nprovide route information, distance, and estimated travel time. While these features are highly \nuseful for navigation, they do not include fare estimation or comparison functionalities.Some \nthird-party applications attempt to provide fare  comparisons, but they often rely on limited data  \nor outdated pricing models, resulting in inaccurate results. Moreover, many of these systems lack \nreal-time integration with mapping APIs, which reduces their reliability. \n1.3 Proposed System"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 21,
+    "text": "real-time integration with mapping APIs, which reduces their reliability. \n1.3 Proposed System \nThe Smart Fare Comparison App is designed to overcome the limitations of existing systems by \nproviding a unified platform for comparing transportation fares. The system allows users to input \ntheir source and destination locations and instantly receive fare estimates for different vehicle \ntypes.The application integrates Google Maps API and Distance Matrix API to fetch accurate \ndistance and travel time data. Based on this information, the system applies fare calculation \nalgorithms to estimate prices for various transportation modes such as cars, bikes, and autos.One"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 22,
+    "text": "algorithms to estimate prices for various transportation modes such as cars, bikes, and autos.One \nof the key features of the proposed system is its real -time processing capability. The application \nquickly retrieves data from APIs and displays results in a user -friendly format, enabling users to \nmake decisions instantly. \n3  \n \n1.4 System Requirements  \nHardware Requirements \n• Processor: Intel i3 or above  \n• RAM: Minimum 4 GB  \n• Storage: Minimum 20 GB free space  \n• Internet Connection: Required for API access  \n• Device: Laptop/Desktop/Mobile  \n \nSoftware Requirements \nFrontend: \n• React  \n• HTML5  \n• CSS3  \n• JavaScript  \nBackend: \n• Node.js  \n• Express.js  \nDatabase:"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 23,
+    "text": "Frontend: \n• React  \n• HTML5  \n• CSS3  \n• JavaScript  \nBackend: \n• Node.js  \n• Express.js  \nDatabase: \n• MongoDB / MySQL  \nAPIs \n• Google Distance Matrix API  \nDevelopment Tools: \n• Visual Studio Code  \n• Postman  \n• Git & GitHub  \n \nOperating System Requirements \n• Windows 10/11  \n• Linux  \n• macOS  \n \nBrowser Requirements \n• Google Chrome  \n• Microsoft Edge  \n \n4  \n \n• Mozilla Firefox  \n \nFunctional Requirements \n• User enters source and destination  \n• System fetches distance and duration using API  \n• Fare calculation for multiple services  \n• Display fare comparison results  \n• Error handling for invalid inputs  \n \nNon-Functional Requirements \n• Fast response time"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 24,
+    "text": "• Error handling for invalid inputs  \n \nNon-Functional Requirements \n• Fast response time  \n• Accurate fare calculation  \n• User-friendly interface  \n• Secure API communication \n5  \n2. LITERATURE SURVEY \n \n \nS.No Author / \nYear Title / Topic Methodology / \nTechnology Key Findings Limitations \n1 Sawant et \nal., 2025 \nFare Comparison \nApp of Uber, Ola \nand Rapido \nWeb-based fare \ncomparison using \nAPIs and backend \nprocessing for multi-\nplatform ride data \nDemonstrated that \ncomparing multiple ride \nproviders on one \nplatform improves user \nconvenience, \ntransparency, and \ndecision-making. \nDependence on external \nAPIs and data access \nrestrictions reduces \nconsistency and \nscalability."
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 25,
+    "text": "decision-making. \nDependence on external \nAPIs and data access \nrestrictions reduces \nconsistency and \nscalability. \n2 Quadri et \nal., 2025 \nAI Based Multi-\nRide Fare \nComparison and \nBooking System \nReact/Next.js with \nMapbox Directions \nAPI, fare estimation \nlogic, and dynamic \nsurge-aware \ncomparison \nShowed that integrating \nroute APIs with \nintelligent fare \nestimation can support \naffordable ride selection \nand better booking \nexperience. \nUses predefined or \nsimulated provider \npricing in parts; real-\ntime commercial \nintegration remains \nlimited. \n3 Daga et \nal., 2025 \nCabinet: A Real-\nTime Multi-\nPlatform Ride-\nHailing Fare \nComparison and \nData Aggregation \nSystem \nMicroservices"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 26,
+    "text": "Cabinet: A Real-\nTime Multi-\nPlatform Ride-\nHailing Fare \nComparison and \nData Aggregation \nSystem \nMicroservices \narchitecture, API \nintegration, web \nscraping, and \npredictive analytics for \nsurge trends \nHighlighted that real-\ntime fare aggregation \nimproves price fairness \nand supports smarter \ncommuter decisions. \nComplex architecture \nand legal/technical \nchallenges in scraping \nand aggregating provider \ndata. \n4 Chou et \nal., 2023 \nTaxi Demand and \nFare Prediction with \nHybrid Models \nLSTM-MDN for \ndemand prediction and \nensemble learning for \nfare prediction \nintegrated into a web \ninterface \nAchieved improved fare \nprediction accuracy and \ndemonstrated the value"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 27,
+    "text": "integrated into a web \ninterface \nAchieved improved fare \nprediction accuracy and \ndemonstrated the value \nof AI-driven forecasting \nin transportation \nplatforms. \nFocused more on \nprediction accuracy than \ncross-provider fare \ncomparison or booking \ninteroperability. \n5 Yan et al., \n2019 \nDynamic Pricing \nand Matching in \nRide-Hailing \nPlatforms \nReview of dynamic \npricing, matching, and \nwaiting mechanisms in \nride-hailing \necosystems \nExplained how pricing \nand matching algorithms \nstrongly affect wait time, \nutilization, and system \nefficiency. \nResearch is platform-\nlevel and theoretical; \ndoes not directly address \nuser-facing fare \ncomparison applications. \n6 \nPrashanth \net al.,"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 28,
+    "text": "level and theoretical; \ndoes not directly address \nuser-facing fare \ncomparison applications. \n6 \nPrashanth \net al., \n2026 \nCab Fare \nComparison \nPrototype \nDjango and React with \ncustom APIs, location-\nbased estimation, trip \nhistory, and analytics \nProvided a centralized \nprototype for fare \nestimation without \nrelying fully on volatile \nreal-time third-party \nAPIs. \nEstimated fares are \nbased on custom pricing \nmodels, so real-world \naccuracy may differ \nfrom live provider \nprices. \nTable 2.1 Literature Survey \n \n \n \n \n  \n \n6  \n3. DESIGN AND METHODOLOGY \n \nThe design and methodology of the Smart Fare Comparison App focus on building a"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 29,
+    "text": "6  \n3. DESIGN AND METHODOLOGY \n \nThe design and methodology of the Smart Fare Comparison App focus on building a  \nscalable, efficient, and user-friendly system that can provide real-time fare comparisons using \nmodern web  technologies and external APIs. This chapter explains the architectural \ndesign, system components, data flow, and methodologies used to develop the application. \n \n3.1 System Architecture \n \nThe Smart Fare Comparison App follows a client-server architecture , which separates the \nfrontend (user interface) from the backend (data processing and API handling). This separation \nensures better scalability, maintainability, and performance."
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 30,
+    "text": "ensures better scalability, maintainability, and performance. \n \nFigure 3.1.1 System Architecture \n \n1. Presentation Layer (Frontend) \nThis layer is responsible for user interaction. It is developed using React.js and provides \nan intuitive interface where users can: \n• Enter pickup and destination locations"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 31,
+    "text": "7  \n \n• View calculated distances and travel time \n• Compare fares across different vehicle types \n• Interact with the application in real time \nThe frontend communicates with the backend through RESTful APIs. \n \n2. Application Layer (Backend) \nThe backend is developed using Node.js and Key responsibilities include: \n• Receiving user input from the frontend \n• Calling Google APIs to fetch distance and time \n• Applying fare calculation algorithms \n• Sending processed data back to the frontend \nThe backend ensures efficient handling of asynchronous API calls and manages the business \nlogic of the application. \nExpress.js. It acts as the core processing unit of the system."
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 32,
+    "text": "logic of the application. \nExpress.js. It acts as the core processing unit of the system. \n \n \n3. Data Layer (Database & External APIs) \nThis layer includes: \n•  MongoDB Database – Stores user data, search history, and ride information \n• Google Maps  API –    Provides location and routing services \n•     Distance Matrix API   –   Calculates distance and travel time \nThe integration of external APIs enhances the accuracy and functionality of the system. \n8  \n              \n              3.1.1 Block Diagram \nThe block diagram represents the flow of data and interaction between different components of \nthe system. \n \n \nFigure 3.1.2 Block Diagram \n \nFlow Description:"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 33,
+    "text": "the system. \n \n \nFigure 3.1.2 Block Diagram \n \nFlow Description: \nUser Input → React Frontend → Node.js Backend → Google Distance Matrix API → Backend \nProcessing → Fare Calculation → Output Display \nThe block diagram clearly illustrates how user input is processed step by step to produce the final \nfare comparison output. \n \n \n             3.2  UML Diagrams \n \nUnified Modeling Language (UML) diagrams are used to visually represent the system design and \ninteractions."
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 34,
+    "text": "9  \n \n3.2.1 Sequence Diagram \nThe sequence diagram shows the step-by-step interaction between system components. \n \nFig 3.2.1 Sequence Diagram \n \nFlow: \n1. User enters source and destination \n2. Frontend sends request to backend \n3. Backend calls Google API \n4. API returns distance and time \n5. Backend calculates fares"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 35,
+    "text": "10  \n \n6. Results are sent back to frontend \n7. Frontend displays fare comparison \nThis diagram highlights the real-time communication between components. \n \n \n3.2.2 ER Diagram (Entity Relationship Diagram) \n \nThe ER diagram represents the structure of the database. \nEntities: \n• User \n• Search History \n• Fare Details \nAttributes: \nUser: \nUser ID \nName \nEmail \nSearch: \nSource \nDestination \nTimestamp \nFare: \nVehicle Type Distance Price \n11  \n \nFigure 3.2.2 ER Diagram \n \n \n \n \nRelationships: \n• A user performs multiple searches \n• Each search generates multiple fare results"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 36,
+    "text": "12  \n \n3.2.3 Use Case Diagram \n \nThe use case diagram shows how users interact with the system.  \n \n \nFigure 3.2.3 Use Case Diagram \n \n \nActors: \n• User \nUse Cases: \n• Enter locations \n• Request fare comparison \n• View results \n• Save history (optional)"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 37,
+    "text": "13  \n \nThis diagram helps in understanding system functionality from a user perspective. \n3.3 Methodology \n \nThe development of the Smart Fare Comparison App follows a structured methodology that \nensures efficiency and reliability. \n \n3.3.1 Development Approach \n \nThe project follows an Agile development approach, which allows iterative development and \ncontinuous improvement. \nSteps involved: \nRequirement gathering \n1. System design \n2. Implementation \n3. Testing \n4. Deployment \n \nTechnologies Used \nFrontend: \n• React.js \n• HTML, CSS, JavaScript \nBackend: \n• Node.js \n• Express.js \nDatabase: \n• MongoDB \nAPIs: \n• Google Maps API \n• Distance Matrix API \n \n \n14  \n \nAlgorithms Used"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 38,
+    "text": "• Express.js \nDatabase: \n• MongoDB \nAPIs: \n• Google Maps API \n• Distance Matrix API \n \n \n14  \n \nAlgorithms Used \n1. Distance Calculation Algorithm \nUses Distance Matrix API to compute: \n• Distance between locations \n• Estimated travel time \n \n2. Fare Calculation Algorithm \nThe fare is calculated using a simple formula: \nFare = Base Fare + (Distance × Rate per km) \nExample: \n• Car: ₹50 + ₹12/km \n• Bike: ₹30 + ₹8/km \n• Auto: ₹40 + ₹10/km \n \n3. API Handling Algorithm \n• Send request to API \n• Receive response \n• Parse JSON data \n• Extract distance & time \n \n \n3.3.2 System Workflow \nThe workflow of the system explains how the application operates step by step:"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 39,
+    "text": "3.3.2 System Workflow \nThe workflow of the system explains how the application operates step by step: \n1. User enters pickup and destination locations \n2. Frontend sends request to backend \n3. Backend calls Google Distance Matrix API \n4. API returns distance and duration \n5. ‘Frontend sends request to backend \n6. Backend calls Google Distance Matrix API \n7. API returns distance and duration \n15  \n \n             Backend calculates fares for different vehicles \n8. Data is sent back to frontend \n9. Frontend displays results \n \n \nDesign Considerations \nSeveral factors were considered during system design: \n1. Scalability \nThe system is designed to handle multiple users simultaneously."
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 40,
+    "text": "1. Scalability \nThe system is designed to handle multiple users simultaneously. \n2. Performance \nEfficient API handling ensures fast response time. \n3. User Experience \nSimple and intuitive UI design improves usability. \n4. Accuracy \nUse of Google APIs ensures reliable data. \n \nSecurity Considerations \n• API keys are secured using environment variables \n• Input validation is implemented \n• Secure communication using HTTPS \n \nAdvantages of the Design \n• Modular architecture \n• Easy to maintain \n• High performance \n• Real-time processing \n \n \n16  \n4. IMPLEMENTATION \n4.1 Location Input & Processing Module (React + Google Places API)"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 41,
+    "text": "16  \n4. IMPLEMENTATION \n4.1 Location Input & Processing Module (React + Google Places API)  \nFigure 4.1.1 represents the location input module, which acts as the entry point of the Smart Fare \nComparison App. This module allows users to enter their pickup and destination locations through \nan interactive user interface developed using React.js. The system integrates the Google Places \nAutocomplete API to provide real -time suggestions as users type, improving accuracy and user \nexperience.Once the user selects valid locations, the input data is captured and stored in  the \napplication state. The module ensures that the entered locations are properly formatted before"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 42,
+    "text": "application state. The module ensures that the entered locations are properly formatted before \nbeing sent to the backend  server. This preprocessing step is essential to avoid errors during API \ncalls and to ensure consistent results from the distance calculation service. \n \n      Figure 4.1.1 Location  Input & Processing Module (React + Google Places API)"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 43,
+    "text": "17  \n \n \n4.2 Distance Calculation Module(Google Distance Matrix API)  \nIn Figure 4.2.1 the Distance Calculation Module is shown as the core component responsible for \ncomputing the distance and travel duration between the  source and destination. This module  uses \nthe Google Distance Matrix API, which provides accurate and real -time information based on \ncurrent traffic conditions and routing algorithms. \nThe backend sends a request to the API  with the selected origin and destination. The API  returns \nstructured data containing distance (in meters) and duration (in seconds). This data is then \nprocessed and converted into user-friendly units such as kilometers and minutes."
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 44,
+    "text": "processed and converted into user-friendly units such as kilometers and minutes. \nThis module plays a crucial role in ensuring that the fare estimation is accurate and reliable, as all \nsubsequent calculations depend on the retrieved distance. \n \nFigure 4.2.1 Distance Calculation Modul\n18  \n \n4.3 Fare Calculation Logic (Dynamic Pricing Algorithm)  \nThe fare calculation module, which computes the estimated travel cost for different vehicle types \nsuch as car, bike, and auto. The system uses a predefined pricing model where each vehicle \ncategory has a base fare and a rate per kilometer. \nThe general formula used is: \nFare = Base Fare + (Distance × Rate per km) \nFor example:"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 45,
+    "text": "The general formula used is: \nFare = Base Fare + (Distance × Rate per km) \nFor example: \n• Car: ₹50 + ₹12/km \n• Bike: ₹30 + ₹8/km \n• Auto: ₹40 + ₹10/km \nThe module receives the calculated distance from the previous step and applies these formulas to \ngenerate fare estimates. The results are structured in a way that allows easy comparison between \ndifferent transport options.This module ensures transparency in pricing and helps users choose the \nmost cost-effective option. \n \n                                 Figure 4.3.1 Fare Calculation Module"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 46,
+    "text": "19  \n \n4.4 Backend API Implementation (Node.js + Express) \nBackend API Module \nThe backend API module, which acts as the central controller of the system. Built using Node.js \nand Express.js, this module handles communication between the frontend and external APIs.The \nbackend receives location data from the frontend and processes it by calling the Google Distance \nMatrix API. Once the distance data is retrieved, it applies the fare calculation logic and sends the \nresults back to the frontend in JSON format. \nThe backend follows an asynchronous processing model, ensuring that API calls do not block"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 47,
+    "text": "The backend follows an asynchronous processing model, ensuring that API calls do not block \nexecution. This improves system performance and allows multiple users to access the application \nsimultaneously. \n \n \n \n4.5 Database Implementation (MongoDB)  \n \nMongoDB is used as the database for storing user queries and fare comparison results. Being a \nNoSQL database, MongoDB provides flexibility in storing data in a JSON-like format. \n \nThe system stores details such as: \n• Pickup location \n• Destination \n• Distance \n• Calculated fares \n• Timestamp \n \nUsing Mongoose, a schema is defined to maintain structure and consistency in stored data. This"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 48,
+    "text": "• Timestamp \n \nUsing Mongoose, a schema is defined to maintain structure and consistency in stored data. This \nallows efficient querying and retrieval of past records for analysis or future reference. \nThe database module enhances the system by enabling data persistence and scalability. \n20  \n \n4.6 Results Display Module (React Dashboard UI)  \nThe results display module, where the calculated fares are presented to the user. The frontend \ndynamically renders the results using React components, displaying each vehicle type along with \nits estimated price. \nThe UI is designed to be clean and user-friendly, allowing users to easily compare fares at a glance."
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 49,
+    "text": "The UI is designed to be clean and user-friendly, allowing users to easily compare fares at a glance. \nAdditional information such as distance and estimated travel time is also displayed for better \ndecision-making. \nThe module updates in real time as new data is received from the backend, ensuring a seamless \nuser experience. \n \n \nSystem Workflow Integration \nThe complete workflow of the Smart Fare Comparison App is as follows: \n1. User enters pickup and destination locations \n2. Frontend sends data to backend \n3. Backend calls Google Distance Matrix API \n4. API returns distance and time \n5. Backend calculates fares \n6. Results are sent to frontend \n7. Frontend displays fare comparison"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 50,
+    "text": "5. Backend calculates fares \n6. Results are sent to frontend \n7. Frontend displays fare comparison \nThis integrated workflow ensures smooth communication between all system components. \n21  \n5. TESTING AND RESULTS \n \n5.1 Testing  \nThe Smart Fare Comparison App was tested using a combination of unit testing and integration \ntesting to ensure the accuracy and reliability of each module. Unit testing was performed on \nindividual components such as location input handling, API request processing, and fare \ncalculation logic. Integration testing was conducted to verify the interaction between the frontend \n(React), backend (Node.js), and the external Google Distance Matrix API."
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 51,
+    "text": "(React), backend (Node.js), and the external Google Distance Matrix API. \nThe testing process focused on validating: \n• Correct input handling for pickup and destination locations \n• Accurate distance retrieval from the API \n• Proper fare calculation for different vehicle types \n• Seamless communication between frontend and backend \n• Error handling for invalid inputs or API failures \n \n      Table 5.1.1 Sample Test Cases \n \nTest Case \nID \nTest Scenario Input Expected Output Status \nTC01 User Input Validation Valid pickup & \ndestination \nInputs accepted \nsuccessfully \nPass \nTC02 API Request Valid locations Distance retrieved \nfrom API \nPass \nTC03 Distance Calculation Hyderabad → \nWarangal"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 52,
+    "text": "TC02 API Request Valid locations Distance retrieved \nfrom API \nPass \nTC03 Distance Calculation Hyderabad → \nWarangal \nDistance displayed \nin km \nPass \nTC04 Fare Calculation Distance value Correct fare for \nCar/Bike/Auto \nPass \nTC05 Backend \nCommunication \nAPI call from \nfrontend \nJSON response \nreceived \nPass \nTC06 Error Handling Invalid location Error message \ndisplayed \nPass \nTC07 UI Rendering API response Data displayed \ncorrectly on UI \nPass \nTC08 Performance Test Multiple requests System responds \nwithout delay \nPass \n \n \n \n  \n22  \n \n5.2Results \nDashboard with Input and Results  \nFigure 5.2.1shows the main interface of the Smart Fare Comparison App where users enter pickup"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 53,
+    "text": "Figure 5.2.1shows the main interface of the Smart Fare Comparison App where users enter pickup \nand destination locations. The system provides a simple and user -friendly interface for entering \ninputs and initiating the fare comparison process. Once the user clicks the “Compare Fare” \nbutton, the system processes the request and displays the results dynamically. \n \n \nFigure 5.2.1 Dashboard Interface \n \n \nDistance Calculation Result  \nFigure 5.2.2 illustrates the output of the distance calculation module. After sending the request to \nthe Google Distance Matrix API, the system retrieves the exact distance between the selected"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 54,
+    "text": "the Google Distance Matrix API, the system retrieves the exact distance between the selected \nlocations. The result is displayed in kilometers along with estimated travel duration, ensuring \nthat users receive accurate and real-time data."
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 55,
+    "text": "23  \n \nDistance Calculation Result \n                                                                        Figure 5.2.2 \n \n \nFare Comparison Output Figure \n5.2.3 Fare Comparison Result \nFigure 5.2.3 shows the fare comparison results generated by the system. Based on the calculated \ndistance, the application computes the estimated fares for different vehicle types such as car, \nbike, and auto. The results are displayed in a structured format, allowing users to easily compare \nprices and choose the most economical option. \n\n24  \n \n \n \n   Figure 5.2.3   Fare Comparison \nResult"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 56,
+    "text": "25  \n \nBackend API Response Figure \n5.4 API Response Output \nThe backend API response in JSON format. The response includes distance and calculated fares \nfor all vehicle categories. This confirms that the backend is successfully processing the request \nand returning accurate results to the frontend. \nExample response: \n{ \n\"distance\": \"25.50\", \n\"car\": \"356.00\", \n\"bike\": \"234.00\", \n\"auto\": \"295.00\" \n} \n \nPerformance Analysis \nThe system was evaluated based on response time and accuracy. The average response time for \nfare calculation was observed to be between 1–3 seconds, depending on network conditions and"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 57,
+    "text": "fare calculation was observed to be between 1–3 seconds, depending on network conditions and \nAPI response time. The use of asynchronous API calls in Node.js ensures that the syste m \nremains responsive even under multiple user requests.  The accuracy of fare estimation was \ndirectly dependent on the precision of the distance provided by the Google Distance Matrix API, \nhich is highly reliable and widely used in real-world applications."
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 58,
+    "text": "26  \n6. CONCLUSION AND FUTURE SCOPE \n \n \n6.1 Conclusion \nThe Smart Fare Comparison App provides an effective and user -friendly solution to the common \nproblem of estimating travel costs across different transportation options. With the rapid growth \nof urban transportation services, users often face difficulty in selecting the most economical and \nefficient mode of travel. This project addresses that challenge by offering a centralized platform \nthat calculates and compares fares in real time.  The system integrates modern web technologies \nsuch as React.js for the frontend and Node.js with Express.js for the backend, ensuring a responsive"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 59,
+    "text": "such as React.js for the frontend and Node.js with Express.js for the backend, ensuring a responsive \nand scalable architecture. By utilizing the Google Distance Matrix API, the application is able to \nretrieve accurate distance and travel time data based on real-world conditions. This data is then \nused to compute fare estimates using predefined pricing models for different vehicle types such as \ncars, bikes, and auto-rickshaws. \n \nOne of the key strengths of the system is its simplicity and efficiency. The application requires \nminimal user input and provides instant results, making it highly accessible for everyday use. The"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 60,
+    "text": "minimal user input and provides instant results, making it highly accessible for everyday use. The \nmodular design of the system ensures that each component, including location input, API \ncommunication, and fare calculation, operates independently while maintaining seamless \nintegration. \n \nThe testing results demonstrate that the system performs reliably under various conditions, \nproviding accurate fare comparisons with minimal response time. The use of asynchronous \nprocessing in the backend enhances performance and ensures smooth handling of multiple \nrequests. Overall, the Smart Fare Comparison App successfully achieves its objective of"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 61,
+    "text": "requests. Overall, the Smart Fare Comparison App successfully achieves its objective of \ndelivering a real-time fare estimation and comparison platform. It improves decision -making for \nusers, reduces uncertainty in travel planning, and showcases the practical application of web \ndevelopment and API integration in solving real-world problems. \n27  \n  \n \n \n6.2 Future Scope \n \nAlthough the Smart Fare Comparison App provides a strong foundation, there are several \nopportunities for future enhancements that can significantly improve its functionality and real -\nworld applicability.  One major improvement is the integration of real-time pricing from"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 62,
+    "text": "world applicability.  One major improvement is the integration of real-time pricing from \nride-sharing platforms. Currently, the system uses predefined fare models, but by connecting with \nlive APIs from services such as cab providers, the application can provide dynamic and more \naccurate pricing based on demand, traffic conditions, and surge pricing \n \nAnother important enhancement is the implementation of Automatic Location Detection using \nGPS. This would allow the system to automatically detect the user’s current location, eliminating \nthe need for manual input and improving convenience.  The application can also be extended by"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 63,
+    "text": "the need for manual input and improving convenience.  The application can also be extended by \nadding route optimization features. By suggesting alternative routes with lower travel time or cost, \nthe system can further assist users in making better travel decisions. Integration with map \nvisualization tools would enhance user interaction and provide a more intuitive experience. \n \nIn addition, the system can be developed into a mobile application using frameworks such as React \nNative. This would increase accessibility and allow users to access the service on the go, which is \nessential for real -time travel planning.  Another potential enhancement is the inclusion of user"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 64,
+    "text": "essential for real -time travel planning.  Another potential enhancement is the inclusion of user \naccounts and history tracking. By storing previous searches and travel data, the system can \nprovide personalized recommendations and analytics, helping users understand their travel \npatterns and expenses \n \nCloud deployment and scalability improvements can also be considered to handle a larger number \nof users and ensure high availability. Security enhancements such as authentication and data \nencryption can further strengthen the system.  In the long term, the Smart Fare Comparison App \nhas the potential to evolve into a comprehensive travel assistant platform that not only compares"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 65,
+    "text": "has the potential to evolve into a comprehensive travel assistant platform that not only compares \nfares but also provides booking options, route recommendations, and real-time traffic insights. \n \n \n \n \n \n28  \n7. BIBLIOGRAPHY \n      \n     7.1 References: \n[1]. Google Developers, “Distance Matrix API (Legacy) Overview”, Google Maps Platform, \n2024. \n[2]. Google Developers, “Autocomplete (New) | Places API”, Google Maps Platform, 2024. \n[3]. Node.js, “Node.js Documentation”, Official Documentation, 2023. \n[4]. Express.js, “Express.js Web Application Framework”, OpenJS Foundation, 2023. \n[5]. React Documentation Team, “React Documentation”, Meta Platforms, 2023."
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 66,
+    "text": "[5]. React Documentation Team, “React Documentation”, Meta Platforms, 2023. \n[6]. MongoDB, “MongoDB Documentation”, MongoDB Inc., 2022. \n[7]. Axios Contributors, “Axios HTTP Client Documentation”, Open Source Project, 2023. \n[8]. MDN Web Docs, “Using the Fetch API”, Mozilla Developer Network, 2023. \n[9]. W3Schools, “JavaScript Tutorial”, Web Development Reference, 2023. \n[10]. GeeksforGeeks, “Build a Fare Estimation App using Google Maps API”, Technical \nTutorial, 2024. \n[11]. Mongoose, “Mongoose ODM Documentation”, Official Documentation, 2023. \n[12]. npm, “npm Documentation”, npm Inc., 2023. \n[13]. Microsoft, “Visual Studio Code Documentation”, Microsoft Learn, 2023."
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 67,
+    "text": "[13]. Microsoft, “Visual Studio Code Documentation”, Microsoft Learn, 2023. \n[14]. Postman, “Postman API Platform Documentation”, Postman Inc., 2023. \n[15]. Git, “Git Documentation”, Software Freedom Conservancy, 2023. \n[16]. GitHub Docs, “GitHub Documentation”, GitHub Inc., 2023. \n[17]. MDN Web Docs, “JavaScript Guide”, Mozilla Developer Network, 2023. \n[18]. MDN Web Docs, “HTML: HyperText Markup Language”, Mozilla Developer Network, \n2023. \n[19]. MDN Web Docs, “CSS: Cascading Style Sheets”, Mozilla Developer Network, 2023. \n[20]. Microsoft, “Web API Design Best Practices”, Microsoft Architecture Center, 2023. \n. \n29  \n8. APPENDIX \n \nIndex.js \nimport React from 'react';"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 68,
+    "text": ". \n29  \n8. APPENDIX \n \nIndex.js \nimport React from 'react'; \nimport ReactDOM from 'react-dom/client'; \nimport './index.css'; \nimport App from './App'; \nimport reportWebVitals from './reportWebVitals'; \n \nconst root = ReactDOM.createRoot(document.getElementById('root')); \nroot.render( \n<React.StrictMode> \n<App /> \n</React.StrictMode> \n); \n \nreportWebVitals(); \n \n \nApp.jsx \nimport React, { useState } from \"react\"; \nimport axios from \"axios\"; \n \nfunction App() { \nconst [pickup, setPickup] = useState(\"\"); \nconst [destination, setDestination] = useState(\"\"); \nconst [fare, setFare] = useState(null); \n \nconst calculateFare = async () => { \ntry {"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 69,
+    "text": "const [fare, setFare] = useState(null); \n \nconst calculateFare = async () => { \ntry { \nconst res = await axios.post(\"http://localhost:5000/api/fare\", { \npickup, \ndestination, \n30  \n}); \nsetFare(res.data); \n} catch (err) { \nalert(\"Error fetching fare\"); \n} \n}; \n \n \nreturn ( \n<div style={{ padding: \"30px\" }}> \n<h1>   Smart Fare Calculator</h1> \n \n \n<input \ntype=\"text\" \nplaceholder=\"Enter Pickup Location\" \nvalue={pickup} \nonChange={(e) => setPickup(e.target.value)} \n/> \n<br /><br /> \n \n \n<input \ntype=\"text\" \nplaceholder=\"Enter Destination\" \nvalue={destination} \nonChange={(e) => setDestination(e.target.value)} \n/> \n<br /><br /> \n31  \n<button onClick={calculateFare}>Calculate Fare</button>"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 70,
+    "text": "/> \n<br /><br /> \n31  \n<button onClick={calculateFare}>Calculate Fare</button> \n \n \n{fare && ( \n<div> \n<h3>Distance: {fare.distance}</h3> \n<h3>Duration: {fare.duration}</h3> \n<h2>Estimated Fare: ₹{fare.price}</h2> \n</div> \n)} \n</div> \n); \n} \n \n \nexport default App; \n \n \nserver.js \nconst express = require(\"express\"); \nconst axios = require(\"axios\"); \nconst cors = require(\"cors\"); \n \nconst app = express(); \napp.use(cors()); \napp.use(express.json()); \n32  \n//   Replace with your Google API Key \nconst GOOGLE_API_KEY = \"YOUR_GOOGLE_API_KEY\"; \n \n \napp.post(\"/api/fare\", async (req, res) => { \nconst { pickup, destination } = req.body; \n \ntry { \nconst url ="
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 71,
+    "text": "app.post(\"/api/fare\", async (req, res) => { \nconst { pickup, destination } = req.body; \n \ntry { \nconst url = \n`https://maps.googleapis.com/maps/api/distancematrix/json?origins=${pickup}&destinations=${ \ndestination}&key=${GOOGLE_API_KEY}`; \n \n \nconst response = await axios.get(url); \n \n \nconst element = response.data.rows[0].elements[0]; \n \n \nconst distanceText = element.distance.text; // e.g., \"10 km\" \nconst durationText = element.duration.text; \n \nconst distanceValue = element.distance.value / 1000; // meters → km \n \n \n// Fare calculation logic \nconst baseFare = 30; \nconst perKm = 10; \n \n \nconst price = Math.round(baseFare + distanceValue * perKm); \n \n \nres.json({ \n33"
+  },
+  {
+    "source": "iompganesh 888888.pdf",
+    "chunk_id": 72,
+    "text": "const perKm = 10; \n \n \nconst price = Math.round(baseFare + distanceValue * perKm); \n \n \nres.json({ \n33  \ndistance: distanceText, \nduration: durationText, \nprice, \n}); \n} catch (err) { \nres.status(500).json({ error: err.message }); \n} \n}); \n \n \napp.listen(5000, () => console.log(\"Server running on port 5000\"));"
+  },
+  {
+    "source": "sample.txt",
+    "chunk_id": 0,
+    "text": "FastAPI is a Python web framework used to build APIs quickly.\n\nRAG means Retrieval Augmented Generation. It retrieves relevant documents before generating an answer.\n\nHybrid retrieval combines keyword search like BM25 and vector search like FAISS.\n\nFAISS is useful for searching similar text chunks using embeddings.\n\nCross encoder reranking improves answer quality by reordering retrieved chunks.\n\nA production RAG system should return citations from the source documents."
+  }
+]

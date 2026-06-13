@@ -1,0 +1,13 @@
+
+
+FastAPI is a Python web framework used to build APIs quickly.
+
+RAG means Retrieval Augmented Generation. It retrieves relevant documents before generating an answer.
+
+Hybrid retrieval combines keyword search like BM25 and vector search like FAISS.
+
+FAISS is useful for searching similar text chunks using embeddings.
+
+Cross encoder reranking improves answer quality by reordering retrieved chunks.
+
+A production RAG system should return citations from the source documents.
